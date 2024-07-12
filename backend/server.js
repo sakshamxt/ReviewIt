@@ -14,7 +14,7 @@ const port = process.env.PORT || 5000;
 const app = express();
 app.use(
   cors({
-    origin: "*",
+    origin: "https://movie-review-frontend-lake.vercel.app/",
   })
 );
 app.use(express.json());
