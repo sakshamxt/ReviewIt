@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <>
       <div className="home">
-        <div className="px-28 mt-8 py-3 flex items-center">
+        <div className="flex items-center py-3 mt-8 px-28">
           <input
             className="w-96 h-full outline-none border-[2px] border-gray-300 focus:border-gray-400 rounded-tl-md rounded-bl-md border-r-none px-4 py-2"
             type="text"

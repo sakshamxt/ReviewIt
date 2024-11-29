@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+const path = require("path");
 import cookieParser from "cookie-parser";
 import connectDB from "./config/db.js";
 import cors from "cors";
@@ -14,13 +15,13 @@ const port = process.env.PORT || 5000;
 const app = express();
 app.use(
   cors({
-    origin: "https://movie-review-frontend-lake.vercel.app/",
+    origin: "*",
   })
 );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-
+app.use(express.static(path.join(__dirname, "build")));
 app.use("/api/movies", movieRoutes);
 app.use("/api/movies", reviewRoutes);
 app.use("/api/users", userRoutes);

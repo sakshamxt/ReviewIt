@@ -23,37 +23,37 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="w-full flex sticky top-0 z-10 shadow-md items-center justify-between px-28 py-3 bg-white text-black">
-        <Link className="font-bold text-2xl" to="/">
-          <h2>MovieReviewz</h2>
+      <div className="sticky top-0 z-10 flex items-center justify-between w-full py-3 text-black bg-white shadow-md px-28">
+        <Link className="text-2xl font-bold" to="/">
+          <h2>ReviewIt</h2>
         </Link>
 
         <ul className="flex items-center gap-6">
           <li className="nav-item">
-            <Link className="link cursor-pointer" to="/">
+            <Link className="cursor-pointer link" to="/">
               Home
             </Link>
           </li>
           {userInfo ? (
             <>
               <li className="nav-item">
-                <Link className="link cursor-pointer" to="/profile">
+                <Link className="cursor-pointer link" to="/profile">
                   Profile
                 </Link>
               </li>
-              <li className="nav-item cursor-pointer" onClick={handleLogOut}>
+              <li className="cursor-pointer nav-item" onClick={handleLogOut}>
                 Logout
               </li>
             </>
           ) : (
             <>
               <li className="nav-item">
-                <Link className="link cursor-pointer" to="/login">
+                <Link className="cursor-pointer link" to="/login">
                   Login
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="link cursor-pointer" to="/register">
+                <Link className="cursor-pointer link" to="/register">
                   Register
                 </Link>
               </li>
